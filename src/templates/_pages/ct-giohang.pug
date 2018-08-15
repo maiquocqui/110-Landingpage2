@@ -1,0 +1,148 @@
+section.cart-page
+	.cart-step
+		.cart-table
+			.item
+				.cart-item
+					.img
+						img(src="img/hc1.png", alt="")
+					.caption
+						.name Vali Kéo Lusetti Queenie LT011
+						.id Mã sản phẩm: 
+							strong LT011
+						.option Tùy chọn sản phẩm: 
+							span Xanh ngọc, size 25
+						.price
+							.new 989.000
+							.old
+								del 1.998.000 ₫
+						.input-number
+							.btn-spin.btn-dec -
+							input(type="text" value="1")
+							.btn-spin.btn-inc +
+						a.btn-remove(href="#!") 
+							i.material-icons close
+			.item
+				.cart-item
+					.img
+						img(src="img/hc2.png", alt="")
+					.caption
+						.name Vali Kéo Lusetti Queenie Lorem ipsum dolor LT013
+						.id Mã sản phẩm: 
+							strong LT013
+						.option Tùy chọn sản phẩm: 
+							span Xanh ngọc, size 25
+						.price
+							.new 989.000
+							.old
+								del 1.998.000 ₫
+						.input-number
+							.btn-spin.btn-dec -
+							input(type="text" value="1")
+							.btn-spin.btn-inc +
+						a.btn-remove(href="#!") 
+							i.material-icons close
+		.cart-fee
+			.group
+				.label Tạm tính:
+				.value 989.000 ₫
+			.group
+				.label Phí vận chuyển:
+				.value 0 ₫
+			.group
+				.label Giảm giá:
+				.value 0 ₫
+			.group.total
+				.label Thành tiền:
+				.value 989.000 ₫
+					.des Giá đã bao gồm VAT
+	.cart-step
+		.input-coupon
+			input(type="text" placeholder="Nhập mã giảm giá")
+			button.btn-submitcoupon Áp dụng
+	.cart-step
+		.cart-title
+			i.material-icons place
+			span Địa chỉ nhận hàng
+		.cart-form
+			.form-wrap
+				.form-group
+					label Họ tên
+					input(type="text")
+				.form-group
+					label Điện thoại
+					input(type="text")
+				.form-group
+					label Email
+					input(type="text")
+				.form-group
+					label Tỉnh / Thành phố
+					select
+						option Chọn tỉnh / thành phố
+				.form-group
+					label Quận / Huyện
+					select
+						option Chọn quận / huyện
+				.form-group
+					label Địa chỉ
+					input(type="text")
+				.form-group
+					label Ghi chú
+					textarea(name="", cols="30", rows='3')
+	.cart-step
+		.cart-title
+			i.material-icons credit_card
+			span Phương thức thanh toán
+		.cart-payment
+			.item
+				.payment-item.radio
+					input#pay1(type="radio", name="payment" checked)
+					label(for="pay1") Tiền mặt khi nhận hàng (COD)
+			.item
+				.payment-item.radio
+					input#pay2(type="radio", name="payment")
+					label(for="pay2") Chuyển khoản
+					.payment-des
+						.transfer-list
+							.item
+								.transfer-item
+									.img
+										img(src="img/bank1.jpg", alt="")
+									.caption
+										ul
+											li 
+												strong Ngân hàng Á Châu ACB - PGD Bình Trị Đông
+											li 
+												strong Chủ TK: 
+												span.text-red Công Ty TNHH TMDV Vạn Thành Tài
+											li 
+												strong Số TK: 
+												span.text-red 208907449
+			.item
+				.payment-item.radio
+					input#pay3(type="radio", name="payment")
+					label(for="pay3") Thanh toán bằng thẻ ATM (Đã đăng ký Internet Banking)
+			.item
+				.payment-item.radio
+					input#pay4(type="radio", name="payment")
+					label(for="pay4") Thanh toán bằng thẻ quốc tế Visa, Master Card, JCB
+					.payment-des
+						.content
+							p Đổi trả hàng cũng là một trong những chính sách hậu mãi được LUG.VN đặc biệt quan tâm để đảm bảo mang đến quý khách hàng chất lượng dịch vụ tốt nhất. Tuy nhiên, hãy tham khảo những nội dung dưới đây để đảm bảo sản phẩm của bạn có đủ điều kiện để nằm trong danh mục được đổi trả hàng.
+		.payment-agree
+			input#a1(type="checkbox", name="agree")
+			label(for="a1") Tôi đã đọc và đồng ý điều khoản trên
+	.cart-step
+		.cart-title
+			i.material-icons credit_card
+			span Phương thức vận chuyển
+		.cart-shipping
+			.item
+				.shipping-item.radio
+					input#ship4(type="radio", name="shipping" checked)
+					label(for="ship4") Phí vận chuyển giao hàng tận nơi
+	.cart-btn
+		.cart-total
+			.label Thành tiền:
+			.value 989.000 ₫
+			.des Giá đã bao gồm VAT
+		a.btn-continue(href="#!") Hoàn tất

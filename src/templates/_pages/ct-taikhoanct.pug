@@ -1,0 +1,35 @@
+section.user-page
+	.user-form
+		.user-title Thông tin tài khoản
+		.form-wrap
+			.form-group
+				label Họ tên
+				input(type="text")
+			.form-group
+				label Điện thoại
+				input(type="text")
+			.form-group
+				label Email
+				input(type="text")
+			.form-group
+				label Giới tính
+				ul.gender
+					li.radio
+						input#male(type="radio", name="gender")
+						label(for="male") Nam
+					li.radio
+						input#female(type="radio", name="gender")
+						label(for="female") Nữ
+			.form-group
+				label Ngày sinh
+				input.datepicker(type="text")
+			.form-group
+				label Tỉnh / Thành phố
+				select
+					option Chọn tỉnh / thành phố
+			.form-group
+				label Quận / Huyện
+				select
+					option Chọn quận / huyện
+			.frm-btn
+				input(type="submit", value="Cập nhật")

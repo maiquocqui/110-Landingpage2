@@ -1,0 +1,247 @@
+.cartpage
+	padding-bottom: 60px
+	header, footer
+		display: none
+	.cart-header
+		display: block
+
+.cart-page
+.cart-step
+	+pos(rel,null)
+	padding: 10px
+	background: $white
+	margin-bottom: 10px
+	.cart-overlay
+		+pos(abs, 0 null 0 0)
+		right: 0
+		z-index: 5
+		background: $white
+		opacity: 0.5
+	&.active
+		.cart-overlay
+			display: none
+	.cart-title 
+		+flexbox
+		align-items: center
+		align-content: center
+		+fs(14rem)
+		text-transform: uppercase
+		color: $main
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid darken($white,5%)
+		.material-icons
+			+fs(18rem)
+			margin-right: 5px
+		span
+			font-weight: 500
+	.cart-table
+		.item
+			margin-bottom: 15px
+			padding-bottom: 15px
+			border-bottom: 1px dashed darken($white,10%)
+			&:last-child
+				// border-bottom: none
+				// padding-bottom: 0
+				// margin-bottom: 0
+			.cart-item
+				+flexbox
+				+pos(rel,null)
+				.img
+					width: 90px
+					height: 90px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					// border: 1px solid darken($white,10%)
+					// +bor-rad(3px)
+					img
+						max-width: 100%
+						max-height: 100%
+				.caption
+					width: calc(100% - 90px)
+					padding-left: 10px
+					+flexbox
+					flex-wrap: wrap
+					justify-content: space-between
+					.name
+						+fs(14rem)
+						line-height: 1.2
+						font-weight: 500
+						+textover(2)
+						padding-right: 20px
+						width: 100%
+					.id
+						display: inline-block
+						+fs(12rem)
+						color: darken($white,40%)
+						width: 100%
+						strong
+							font-weight: 400
+							color: darken($white,60%)
+					.option
+						+fs(13rem)
+						color: darken($white,40%)
+						margin-bottom: 10px
+						width: 100%
+						span
+							margin-left: 5px
+							color: $main
+					.price
+						line-height: 1
+						.new
+							+fs(14rem)
+							font-weight: 700
+							color: $red
+						.old
+							+flexbox
+							align-items: center
+							align-content: center
+							+fs(12rem)
+							color: darken($white,40%)
+							span
+								color: darken($white,60%)
+					.col-right
+						+flexbox
+						align-items: center
+						align-content: center
+					.btn-remove
+						+pos(abs, 0px 0px null null)
+						.material-icons
+							+fs(18rem)
+							display: block
+	.cart-fee
+		padding-left: 40%
+		.group
+			+flexbox
+			justify-content: space-between
+			+fs(13rem)
+			.label
+			.value
+				+fs(14rem)
+				color: $bluegrey
+				font-weight: 500
+				text-align: right
+				.des
+					+fs(12rem)
+					font-weight: normal
+					color: darken($white,40%)
+			&.total
+				.label
+					font-weight: 700
+				.value
+					font-weight: 700
+					color: $red
+					+fs(15rem)
+	.input-coupon
+		+flexbox
+		align-items: center
+		align-content: center
+		input
+			+fs(13rem)
+			padding: 7px 15px
+			+bor-rad(3px)
+			border: 1px solid darken($white,10%)
+			width: 100%
+			color: $main
+			width: calc(100% - 110px)
+			+transition(all,0.5s)
+			&::-webkit-input-placeholder
+				color: inherit
+				opacity: 0.5
+			&:active, &:focus
+				border-color: lighten($red,20%)
+				box-shadow: 0 0 0 0.2rem color-rgba($red,0.1)
+		button
+			+fs(13rem)
+			padding: 8px 15px
+			// text-transform: uppercase
+			color: $white
+			font-weight: 500
+			background: $orangegradient
+			+bor-rad(3px)
+			width: 100px
+			text-align: center
+			margin-left: 10px
+	.cart-form
+		.form-wrap
+			.form-group
+				+flexbox
+				label
+					width: 120px
+				input, select, textarea
+					width: calc(100% - 120px)
+	.cart-payment
+		.item
+		.payment-item
+			margin-bottom: 5px
+			.payment-des
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				padding: 15px
+				margin: 10px 0
+				margin-left: 20px
+			.transfer-item
+				.img
+					width: 80px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					img
+						max-width: 100%
+						max-height: 100%
+				.caption
+					+fs(14rem)
+			.content
+				+fs(13rem)
+	.payment-agree
+		@extend .checkbox
+	.cart-finish
+		text-align: center
+		&.success
+			.fa
+				color: $green
+		.fa
+			+fs(60rem)
+			margin-bottom: 10px
+.cart-btn
+	+pos(fix, null 0 0 0)
+	z-index: 500
+	padding: 10px
+	background: $white
+	border-top: 1px solid darken($white,5%)
+	box-shadow: 0px 0px 10px color-rgba($black,0.05)
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: space-between
+	.cart-total
+		width: calc(100% - 120px)
+		+flexbox
+		flex-wrap: wrap
+		.label
+			+fs(15rem)
+			font-weight: 700
+		.value
+			+fs(15rem)
+			font-weight: 700
+			color: $red
+			padding-left: 5px
+		.des
+			width: 100%
+			+fs(12rem)
+			font-weight: normal
+			color: darken($white,40%)
+	.btn-continue
+		display: block
+		background: $orangegradient
+		+bor-rad(5px)
+		color: $white
+		line-height: 40px
+		width: 120px
+		font-weight: 500
+		text-transform: uppercase
+		text-align: center
+		box-shadow: 0px 10px 20px -10px $orange

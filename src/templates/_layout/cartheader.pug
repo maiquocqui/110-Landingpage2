@@ -1,0 +1,28 @@
+header.cart-header
+	.header-bg(style="background:linear-gradient(120deg, #1e196d, #8e22a9")
+	.header-wrap
+		a.btn-back(href="index.html")
+			i.material-icons arrow_back
+		h1.header-name Giỏ hàng (
+			strong 2 
+			| sản phẩm)
+		.col-right
+			//- .search
+				.search-toggle
+					i.material-icons search
+			//- .cart
+				a.cart-toggle(href="#!")
+					.cart-amount 
+						i.material-icons shopping_cart
+						span.amount 3
+			.mini-menu
+				.dropdown
+					.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 
+						i.material-icons more_vert
+					.dropdown-menu(aria-labelledby='dropdownMenuButton')
+						a.dropdown-item(href='index.html') Trang chủ
+						a.dropdown-item(href='nganhhang.html') Danh mục
+						a.dropdown-item(href='#') Tài khoản của tôi
+						a.dropdown-item(href='#') Đơn hàng của tôi
+						a.dropdown-item(href='#') Sản phẩm yêu thích
+						a.dropdown-item(href='#') Hỗ trợ khách hàng

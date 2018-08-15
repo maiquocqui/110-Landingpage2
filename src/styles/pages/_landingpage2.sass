@@ -1,0 +1,215 @@
+/*LANDING PAGE CODE*/
+.bg
+	+pos(abs,0 null 0 0)
+	right: 0
+.btn-primary
+	display: inline-block
+	background: linear-gradient(180deg,#f89406 30%,#f77417 70%)
+	+fs(14rem)
+	font-weight: bold
+	color: $white
+	text-transform: uppercase
+	line-height: 36px
+	padding: 0px 40px
+	+bor-rad(5px)
+	border: 1px solid #f89406
+	&:hover
+		border: 1px solid #f89406
+		filter: brightness(120%)
+.btn-secondary
+	display: inline-block
+	+fs(14rem)
+	font-weight: bold
+	color: $blue
+	background: white
+	text-transform: uppercase
+	line-height: 36px
+	padding: 0px 40px
+	+bor-rad(5px)
+	border: 1px solid $blue
+	&:hover
+
+.landing-section1
+	+pos(rel,null)
+	min-height: 460px
+	+media-breakpoint-down(md)
+		background: #0a9bd6
+		padding-bottom: 40px
+	.container
+		+pos(rel,null)
+		z-index: 1
+	.content
+		margin-top: 140px
+		margin-bottom: 0
+		+media-breakpoint-down(md)
+			margin-top: 30px
+	.share
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+.landing-section2
+	+pos(rel,null)
+	padding: 30px 0
+	// min-height: 460px
+	.product-detail
+		.name
+			+fs(24rem)
+			font-weight: bold
+		.price
+			strong
+				color: $red
+				margin-left: 10px
+				+fs(24rem)
+		.link
+			display: inline-block
+			margin-bottom: 10px
+		.sale
+			margin-bottom: 15px
+.landing-section3
+	@extend .landing-section2
+.home-title
+	+fs(24rem)
+	text-transform: uppercase
+	font-weight: bold
+	color: $main
+	+pos(rel,null)
+	z-index: 1
+	margin-bottom: 20px
+.landing-section4
+	+pos(rel,null)
+	padding: 30px 0
+	.product-sale-list
+		.row
+			margin: 0px -10px
+			.col-12
+				padding: 0px 10px
+		.product
+			background: $white
+			height: calc(100% - 20px)
+			margin-bottom: 20px
+			box-shadow: 3px 3px 0px color-rgba($cyan,0.15)
+			figure
+				+flexbox
+				flex-wrap: wrap
+				padding: 20px
+				.product-img
+					width: 190px
+					height: 190px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					+media-breakpoint-down(sm)
+						width: 100%
+						display: block
+						text-align: center
+						margin-bottom: 15px
+					img
+						max-width: 100%
+						max-height: 100%
+				figcaption
+					width: calc(100% - 190px)
+					padding-left: 30px
+					+media-breakpoint-down(sm)
+						width: 100%
+						padding: 0
+					.product-name
+						+fs(18rem)
+						font-weight: bold
+					.product-price
+						.new
+							+fs(18rem)
+							font-weight: bold
+							color: $red
+					.product-sale
+						+bor-rad(5px)
+						border: 1px solid $blue
+						padding: 15px
+						margin-top: 10px
+						margin-bottom: 10px
+						+flexbox
+						flex-wrap: wrap
+						.title
+							+fs(14rem)
+							text-transform: uppercase
+							font-weight: bold
+							color: $blue
+							margin-top: -25px
+							background: $white
+							display: block
+						.content
+							width: 100%
+							margin-bottom: -15px
+					.product-btn
+						+flexbox
+						a
+							width: calc(50% - 5px)
+							padding: 0
+							text-align: center
+							+ a
+								margin-left: 10px
+.landing-section5
+	+pos(rel,null)
+	padding: 30px 0
+	background: $white
+	.row
+		margin: 0px -10px
+		.col-12
+			padding: 0px 10px
+	.video
+		height: calc(100% - 20px)
+		+media-breakpoint-down(md)
+			height: 400px
+			margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			height: 250px
+		iframe
+			height: 100%
+	.post-list
+		.post
+			+flexbox
+			flex-wrap: wrap
+			margin-bottom: 20px
+			.img
+				width: 200px
+				+media-breakpoint-down(sm)
+					width: 150px
+			.detail
+				width: calc(100% - 200px)
+				padding-left: 15px
+				+media-breakpoint-down(sm)
+					width: calc(100% - 150px)
+				.name
+					+fs(18rem)
+					line-height: 1.3
+					font-weight: bold
+					display: -webkit-box
+					height: 1.125rem*1.3*2
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						height: 0.875rem*1.3*2
+				.des
+					+fs(14rem)
+					display: -webkit-box
+					height: 0.875rem*1.5*2
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					+media-breakpoint-down(sm)
+						+fs(13rem)
+						height: 0.8125rem*1.5*2
+				time
+					+fs(14rem)
+					color: darken($white,40%)
+					+media-breakpoint-down(sm)
+						+fs(12rem)
+			&:hover
+				.detail
+					.name
+						color: $red

@@ -1,0 +1,13 @@
+extends _layout/layout
+
+block variables
+	- var title = "LUG mobile"
+	- var bodyclass = "userpage"
+
+block body 
+	include _layout/header
+	//- include _layout/banner
+	main
+		include _layout/userheader
+		include _pages/ct-taikhoanct2-1
+	include _layout/footer

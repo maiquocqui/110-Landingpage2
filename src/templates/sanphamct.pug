@@ -1,0 +1,12 @@
+extends _layout/layout
+
+block variables
+	- var title = "LUG mobile"
+	- var bodyclass = "product-detail-page"
+
+block body 
+	include _layout/header
+	//- include _layout/banner
+	main
+		include _pages/ct-sanphamct
+	include _layout/footer

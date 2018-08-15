@@ -1,0 +1,369 @@
+.product-detail-page
+	padding-top: 0
+	padding-bottom: 60px
+	header
+		.header-bg
+			opacity: 0
+		.header-name
+			display: none
+		.header-wrap
+			.btn-back
+				color: $main
+			.material-icons
+				color: $main
+		&.minimal
+			.header-bg
+				opacity: 1
+			.header-wrap
+				.btn-back
+					color: $white
+				.material-icons
+					color: $white
+
+.product-page
+	.product-slide-wrap
+	.product-slide
+		background: $white
+		.slick-dots
+			+pos(abs, null 0 10px 0)
+			text-align: center
+			z-index: 3
+			li
+				display: inline-block
+				width: 8px
+				height: 8px
+				+bor-rad(50px)
+				background: darken($white,20%)
+				+ li
+					margin-left: 7px
+				&.slick-active
+					background: $red
+				button
+					display: none
+		.img
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			height: 350px
+			+pos(rel,null)
+			&:before
+				content: ''
+				+pos(abs, null 0 0 0)
+				height: 25%
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.05))
+			img
+				max-width: 90%
+				max-height: 90%
+	.product-info
+		padding: 10px
+		background: $white
+		margin-bottom: 10px
+		z-index: 5
+		+pos(rel,null)
+		.price
+			line-height: 1.2
+			.new
+				+fs(24rem)
+				font-weight: 500
+				color: $red
+			.old
+				+fs(14rem)
+				del
+					color: darken($white,40%)
+				span
+					color: $main
+					margin-left: 5px
+		.name-wrap
+			margin-top: 10px
+			.promotion
+				display: inline
+				vertical-align: middle
+				color: $white
+				+fs(12rem)
+				line-height: 1
+				padding: 2px 5px
+				+bor-rad(3px)
+				margin-right: 5px
+				&.sale
+					background: $orangegradient
+			h1.name
+				display: inline
+				vertical-align: middle
+				+fs(18rem)
+				font-weight: 500
+		.id,.brand
+			margin-top: 0px
+			display: inline-block
+			+fs(14rem)
+			color: darken($white,40%)
+			strong
+				font-weight: 400
+				color: darken($white,60%)
+		.id
+			margin-right: 10px
+		.rating
+			margin-top: 5px
+			+flexbox
+			align-items: center
+			align-content: center
+			span
+				margin-left: 10px
+		.share
+			+pos(abs, 10px 10px null null)
+			color: darken($white,60%)
+			.dropdown-menu
+				min-width: unset
+				padding: 0
+				.social
+					padding: 10px 15px
+					+flexbox
+					align-items: center
+					align-content: center
+					a
+						width: 30px
+						height: 30px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						+bor-rad(50px)
+						+fs(16rem)
+						color: $white
+						&.fa-facebook
+							background: $facebook
+						&.fa-twitter
+							background: $twitter
+						&.fa-google-plus
+							background: $google
+						+ a
+							margin-left: 10px
+		.btn-like
+			+pos(abs, 10px 50px null null)
+			color: darken($white,60%)
+			&:before 
+				content: 'favorite_border'
+				@extend .material-icons
+				display: block
+			&.active
+				color: lighten($red,10%)
+				&:before
+					content: 'favorite'
+		.product-btn
+			+pos(fix, null 0 0 0)
+			z-index: 500
+			padding: 10px
+			background: $white
+			border-top: 1px solid darken($white,5%)
+			box-shadow: 0px 0px 10px color-rgba($black,0.05)
+		.btn-buy
+			display: block
+			background: $orangegradient
+			+bor-rad(5px)
+			color: $white
+			line-height: 40px
+			font-weight: 500
+			text-transform: uppercase
+			text-align: center
+			box-shadow: 0px 10px 20px -10px $orange
+	.product-option
+		background: $white
+		padding: 10px
+		margin-bottom: 10px
+		label
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(14rem)
+			color: darken($white,40%)
+			+pos(rel,null)
+			&:after
+				content: '\f105'
+				+fs(18rem)
+				line-height: 1
+				font-weight: bold
+				+pos(abs, 0 0 null null)
+			span
+				color: $main
+				margin-left: 5px
+		.option-group
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		.option-group
+			label
+				+fs(14rem)
+				display: block
+		.color-list
+			white-space: nowrap
+			overflow: auto
+			margin-top: 10px
+			a
+				display: inline-flex
+				align-items: center
+				align-content: center
+				justify-content: center
+				vertical-align: top
+				width: 50px
+				height: 50px
+				+bor-rad(3px)
+				border: 1px solid darken($white,5%)
+				margin-right: 5px
+				&.active
+					border-color: $red
+				img
+					max-width: 100%
+					max-height: 100%
+		.size-list
+			// white-space: nowrap
+			// overflow: auto
+			margin-top: 10px
+			a
+				display: inline-block
+				+fs(13rem)
+				+bor-rad(3px)
+				padding: 3px 15px
+				border: 1px solid darken($white,10%)
+				background: darken($white,3%)
+				margin-right: 10px
+				margin-bottom: 10px
+				&.active
+					color: $red
+					background: color-rgba($red,0.05)
+					border-color: color-rgba($red,0.5)
+	.product-gift
+		background: $white
+		padding: 15px 10px
+		margin-bottom: 10px
+		ul
+			li
+				+pos(rel,null)
+				padding-left: 20px
+				margin-bottom: 5px
+				color: darken($white,60%)
+				&:last-child
+					margin-bottom: 0
+				&:before
+					content: '\f058'
+					+pos(abs, 0 null null 0)
+	.product-description
+		background: $white
+		padding: 10px
+		margin-bottom: 10px
+		.title 
+			+fs(14rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $main
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px solid darken($white,5%)
+		.table
+			+bor-rad(5px)
+			// border: 1px solid darken($white,10%)
+			td
+				+fs(14rem)
+				padding: 10px
+				line-height: 1.3
+				border-top: 1px solid darken($white,5%)
+				&:first-child
+					width: 120px
+					font-weight: 500
+			tr
+				&:first-child
+					td
+						border-top: none
+	.product-comment
+		background: $white
+		padding: 10px
+		margin-bottom: 10px
+		.title 
+			+fs(14rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $main
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px solid darken($white,5%)
+		.comment-frm
+			padding: 10px
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			+fs(13rem)
+			min-height: 100px
+	.product-relative
+		+pos(rel,null)
+		background: $white
+		padding: 10px
+		margin-bottom: 10px
+		.title 
+			+fs(14rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $main
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px solid darken($white,5%)
+		.product-wrap
+			margin: 0px -10px
+			.product-list
+				display: block
+				white-space: nowrap
+				overflow: auto
+			.item
+				display: inline-block
+				width: 150px
+				white-space: normal
+				margin: 0
+				+ .item
+					margin-left: 10px
+		.product-item
+			box-shadow: none
+			padding: 0
+			.img
+				height: 140px
+			.caption
+				padding: 10px 0 0
+	.product-news
+		+pos(rel,null)
+		background: $white
+		padding: 10px
+		margin-bottom: 10px
+		.title 
+			+fs(14rem)
+			font-weight: 500
+			text-transform: uppercase
+			color: $main
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px solid darken($white,5%)
+		.btn-viewmore
+			color: $main
+			+pos(abs,10px 10px null null)
+			color: darken($white,40%)
+			&:after
+				content: '\f105'
+				margin-left: 5px
+		.news-wrap
+			margin: 0px -10px
+		.news-list
+			white-space: nowrap
+			overflow: auto
+			padding: 0px 10px
+			.item
+				display: inline-block
+				white-space: normal
+				+ .item
+					margin-left: 10px
+		.news-item
+			display: block
+			width: 150px
+			.caption
+				padding: 10px 0
+				.name
+					+fs(13rem)
+					font-weight: 500
+					margin-bottom: 5px
+				time
+					+fs(11rem)
+					color: darken($white,40%)

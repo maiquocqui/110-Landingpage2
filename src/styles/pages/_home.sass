@@ -1,0 +1,287 @@
+.page-title
+	+fs(18rem)
+	color: $main
+	font-weight: 500
+	text-transform: capitalize
+	padding: 10px
+.home-deal
+	+pos(rel,null)
+	margin-bottom: 15px
+	.deal-countdown
+		background: $red
+		padding: 10px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		color: $white
+		span
+			display: inline-block
+			+bor-rad(5px)
+			background: $white
+			color: $main
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			font-weight: 500
+			margin: 0px 5px
+	.deal-list
+		background: $white
+		.deal-item
+			padding: 5px 10px
+			&.big
+				height: 100%
+				border-right: 1px solid darken($white,10%)
+				figure
+					.img
+						width: 100%
+						height: auto
+						margin-bottom: 10px
+					figcaption
+						width: 100%
+						padding: 0
+			figure
+				+flexbox
+				flex-wrap: wrap
+				align-items: flex-start
+				align-content: flex-start
+				.img
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					width: 60px
+					height: 60px
+					img
+						max-width: 100%
+						max-height: 100%
+				figcaption
+					width: calc(100% - 70px)
+					padding-left: 10px
+					.price
+						.new
+							+fs(14rem)
+							font-weight: 700
+							color: $red
+						.old
+							+fs(13rem)
+							color: darken($white,40%)
+							+flexbox
+							span
+								color: $main
+	.btn-viewmore
+		+fs(14rem)
+		color: $red
+		font-weight: 500
+		+pos(abs, 13px 10px null null)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-search
+	+pos(rel,null)
+	margin-bottom: 15px
+	.search-wrap
+		.search-list
+			+flexbox
+			flex-wrap: wrap
+			.item
+				width: 50%
+				border-right: 1px solid darken($white,10%)
+				border-bottom: 1px solid darken($white,10%)
+				background: $white
+				&:nth-child(2), &:nth-child(4)
+					border-right: none
+				&:nth-child(3), &:nth-child(4)
+					border-bottom: none
+				.search-item
+					+flexbox
+					padding: 10px
+					.caption
+						width: calc(100% - 60px)
+						padding-right: 10px
+						.name
+							+fs(14rem)
+							font-weight: 700
+						.des
+							+fs(11rem)
+							line-height: 1.2
+							color: darken($white,40%)
+					.img
+						width: 60px
+						height: 60px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						// border: 1px solid darken($white,10%)
+						img
+							max-width: 90%
+							max-height: 90%
+.home-collection
+	+pos(rel,null)
+	margin-bottom: 15px
+	.collection-wrap
+	.collection-list
+		display: block
+		white-space: nowrap
+		overflow: auto
+		padding: 0px 10px
+		.item
+			display: inline-block
+			width: 240px
+			+ .item
+				margin-left: 10px
+	.collection-item
+		display: block
+		background: $white
+		overflow: hidden
+		box-shadow: 0px 5px 10px color-rgba($black,0.05)
+		+bor-rad(5px)
+		.product-wrap
+			+flexbox
+			flex-wrap: wrap
+			flex-direction: column
+			height: 160px
+			.product
+				width: 33.33%
+				height: 80px
+				+flexbox
+				align-items: center
+				align-content: center
+				&.big
+					width: 66.66%
+					height: 160px
+				img
+					max-width: 90%
+					max-height: 90%
+		.caption
+			padding: 0px 10px 10px
+			.name
+				+fs(14rem)
+				font-weight: 500
+				color: $main
+			.des
+				+fs(11rem)
+				line-height: 1.2
+				color: darken($white,40%)
+	.btn-viewmore
+		+fs(14rem)
+		color: $red
+		font-weight: 500
+		+pos(abs, 13px 10px null null)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-brand
+	+pos(rel,null)
+	margin-bottom: 15px
+	.brand-wrap
+	.brand-list
+		white-space: nowrap
+		overflow: auto
+		padding: 0px 10px
+		.item
+			display: inline-block
+			width: 150px
+			+ .item
+				margin-left: 10px
+	.brand-item
+		display: block
+		background: $white
+		overflow: hidden
+		box-shadow: 0px 5px 10px color-rgba($black,0.05)
+		+bor-rad(5px)
+		.img
+		.caption
+			padding: 10px
+			text-align: center
+			.logo
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 50px
+				height: 50px
+				border: 3px solid $white
+				background: $white
+				margin: -30px auto 5px
+				+pos(rel,null)
+				z-index: 1
+				+bor-rad(3px)
+				box-shadow: 0px 3px 10px color-rgba($black,0.1)
+				img
+					max-width: 100%
+					max-height: 100%
+			.name
+				+fs(14rem)
+				font-weight: 500
+				color: $main
+			.des
+				+fs(11rem)
+				line-height: 1.2
+				color: darken($white,40%)
+	.btn-viewmore
+		+fs(14rem)
+		color: $red
+		font-weight: 500
+		+pos(abs, 13px 10px null null)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-category
+	+pos(rel,null)
+	margin-bottom: 15px
+	.category-wrap
+		background: $white
+	.category-list
+		+flexbox
+		flex-wrap: wrap
+		.item
+			width: 33.33%
+			border-right: 1px solid darken($white,10%)
+			border-bottom: 1px solid darken($white,10%)
+			&:nth-child(3n)
+				border-right: none
+			&:nth-child(4), &:nth-child(5), &:nth-child(6)
+				// border-bottom: none
+	.category-item
+		display: block
+		padding: 10px
+		.img
+			width: 70px
+			height: 70px
+			margin: 0 auto 10px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			img
+				max-width: 100%
+				max-height: 100%
+		.name
+			+fs(14rem)
+			font-weight: 500
+			text-align: center
+	.btn-viewmore
+		+fs(14rem)
+		color: $red
+		font-weight: 500
+		+pos(abs, 13px 10px null null)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-product
+	+pos(rel,null)
+	padding-bottom: 40px
+	.product-wrap
+		padding: 0px 10px
+	.product-list
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -5px
+		.item
+			width: 50%
+			padding: 0px 5px
+			margin-bottom: 10px
+	.product-item
