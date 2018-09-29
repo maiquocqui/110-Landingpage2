@@ -291,79 +291,178 @@
 			border: 1px solid darken($white,10%)
 			+fs(13rem)
 			min-height: 100px
-	.product-relative
-		+pos(rel,null)
-		background: $white
-		padding: 10px
+.product-relative
+	+pos(rel,null)
+	background: $white
+	padding: 10px
+	margin-bottom: 10px
+	.title 
+		+fs(14rem)
+		font-weight: 500
+		text-transform: uppercase
+		color: $main
+		padding-bottom: 10px
 		margin-bottom: 10px
-		.title 
-			+fs(14rem)
-			font-weight: 500
-			text-transform: uppercase
-			color: $main
-			padding-bottom: 10px
-			margin-bottom: 10px
-			border-bottom: 1px solid darken($white,5%)
-		.product-wrap
-			margin: 0px -10px
-			.product-list
-				display: block
-				white-space: nowrap
-				overflow: auto
-			.item
-				display: inline-block
-				width: 150px
-				white-space: normal
-				margin: 0
-				+ .item
-					margin-left: 10px
-		.product-item
-			box-shadow: none
-			padding: 0
-			.img
-				height: 140px
-			.caption
-				padding: 10px 0 0
-	.product-news
-		+pos(rel,null)
-		background: $white
-		padding: 10px
-		margin-bottom: 10px
-		.title 
-			+fs(14rem)
-			font-weight: 500
-			text-transform: uppercase
-			color: $main
-			padding-bottom: 10px
-			margin-bottom: 10px
-			border-bottom: 1px solid darken($white,5%)
-		.btn-viewmore
-			color: $main
-			+pos(abs,10px 10px null null)
-			color: darken($white,40%)
-			&:after
-				content: '\f105'
-				margin-left: 5px
-		.news-wrap
-			margin: 0px -10px
-		.news-list
+		border-bottom: 1px solid darken($white,5%)
+	.product-wrap
+		margin: 0px -10px
+		.product-list
+			display: block
 			white-space: nowrap
 			overflow: auto
-			padding: 0px 10px
-			.item
-				display: inline-block
-				white-space: normal
-				+ .item
-					margin-left: 10px
-		.news-item
-			display: block
+			padding: 0px 15px
+		.item
+			display: inline-block
 			width: 150px
+			white-space: normal
+			margin: 0
+			+ .item
+				margin-left: 10px
+	.product-item
+		box-shadow: none
+		padding: 0
+		.img
+			height: 140px
+		.caption
+			padding: 10px 0 0
+.product-news
+	+pos(rel,null)
+	background: $white
+	padding: 10px
+	margin-bottom: 10px
+	.title 
+		+fs(14rem)
+		font-weight: 500
+		text-transform: uppercase
+		color: $main
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid darken($white,5%)
+	.btn-viewmore
+		color: $main
+		+pos(abs,10px 10px null null)
+		color: darken($white,40%)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+	.news-wrap
+		margin: 0px -10px
+	.news-list
+		white-space: nowrap
+		overflow: auto
+		padding: 0px 10px
+		.item
+			display: inline-block
+			white-space: normal
+			+ .item
+				margin-left: 10px
+	.news-item
+		display: block
+		width: 150px
+		.caption
+			padding: 10px 0
+			.name
+				+fs(13rem)
+				font-weight: 500
+				margin-bottom: 5px
+			time
+				+fs(11rem)
+				color: darken($white,40%)
+.product-saleoff
+	+pos(rel,null)
+	background: $white
+	padding: 10px
+	margin-bottom: 10px
+	.title 
+		+fs(14rem)
+		font-weight: 500
+		text-transform: uppercase
+		color: $main
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid darken($white,5%)
+	.saleoff-list
+		padding: 10px 0
+		.saleoff-item
+			+flexbox
+			align-items: flex-start
+			align-content: flex-start
+			margin-bottom: 10px
+			padding-left: 10px
+			+pos(rel,null)
+			&:before
+				content: ''
+				width: 16px
+				height: 16px
+				+bor-rad(3px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 0px null null 0)
+			&:after
+				content: '\f00c'
+				width: 16px
+				height: 16px
+				+bor-rad(3px)
+				color: $white
+				background: $orangegradient
+				line-height: 1
+				text-align: center
+				+pos(abs, 0 null null 0)
+				z-index: 1
+				opacity: 0
+			&.active
+				&:after
+					opacity: 1
+			.img
+				width: 60px
+				height: 60px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
 			.caption
-				padding: 10px 0
+				width: calc(100% - 100px)
+				padding-left: 15px
+				padding-top: 10px
 				.name
 					+fs(13rem)
+					line-height: 1.2
 					font-weight: 500
-					margin-bottom: 5px
-				time
-					+fs(11rem)
-					color: darken($white,40%)
+					+textover(2)
+				.price
+					+flexbox
+					.new
+						+fs(14rem)
+						font-weight: 700
+						color: $red
+					.old
+						+flexbox
+						align-items: center
+						align-content: center
+						margin-left: 10px
+						+fs(12rem)
+						color: darken($white,40%)
+						span
+							color: darken($white,60%)
+	.saleoff-total
+		+fs(16rem)
+		+flexbox
+		align-items: flex-end
+		align-content: flex-end
+		border-top: 1px solid darken($white,5%)
+		padding-top: 10px
+		.price
+			+flexbox
+			margin-left: 15px
+			.new
+				+fs(20rem)
+				font-weight: 700
+				color: $red
+			.old
+				+flexbox
+				align-items: center
+				align-content: center
+				margin-left: 10px
+				+fs(16rem)
+				color: darken($white,40%)
+				span
+					color: darken($white,60%)

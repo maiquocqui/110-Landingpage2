@@ -59,7 +59,7 @@ section.product-page
 		.btn-wrap
 			a.btn-like(href="#!")
 		.product-btn
-			a.btn-buy(href="#!") Thêm vào giỏ hàng
+			a.btn-buy(href="#!") Thêm 2 sản phẩm vào giỏ hàng
 
 	.product-option(data-popup="#popup-option")
 		label Tùy chọn sản phẩm: 
@@ -99,6 +99,49 @@ section.product-page
 			li Thương hiệu chính hãng
 			li Bảo hành 5 năm toàn quốc
 			li Giao hàng tận nơi, thanh toán toàn quốc
+	.product-saleoff
+		.title Sản phẩm kèm theo
+		.saleoff-list
+			.item
+				a.saleoff-item.default(href="#!")
+					.img
+						img(src="img/hc1.png", alt="")
+					.caption
+						.name Vali kéo thời trang
+						.price
+							.new 1.000.000đ
+							.old 
+								del 2.000.000 đ
+								span (-50%)
+			.item
+				a.saleoff-item.active(href="#!")
+					.img
+						img(src="img/hc1.png", alt="")
+					.caption
+						.name Vali kéo thời trang
+						.price
+							.new 1.000.000đ
+							.old 
+								del 2.000.000 đ
+								span (-50%)
+			.item
+				a.saleoff-item(href="#!")
+					.img
+						img(src="img/hc1.png", alt="")
+					.caption
+						.name Vali kéo thời trang
+						.price
+							.new 1.000.000đ
+							.old 
+								del 2.000.000 đ
+								span (-50%)
+		.saleoff-total Tổng tiền:
+			.price
+				.new 7.000.000 đ
+				.old
+					del 10.000.000 đ
+		//- .btn-wrap
+			a.btn-buy(href="#!") Mua 2 sản phẩm
 	#section2.product-description
 		.title Mô tả chi tiết
 		.content

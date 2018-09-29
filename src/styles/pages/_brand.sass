@@ -1,22 +1,69 @@
-.brand-list
-	+flexbox
-	flex-wrap: wrap
-	margin: 0px -5px
-	padding: 10px 10px
-	.item
-		width: 50%
-		padding: 0px 5px
-		margin-bottom: 10px
-	.brand-item
-		+flexbox
-		align-items: center
-		align-content: center
-		justify-content: center
-		background: $white
-		+bor-rad(5px)
-		overflow: hidden
-		box-shadow: 0px 5px 10px color-rgba($black,0.05)
-		height: 100px
-		img
-			max-width: 70%
-			max-height: 70%
+// .brand-list
+// 	+flexbox
+// 	flex-wrap: wrap
+// 	margin: 0px -5px
+// 	padding: 10px 10px
+// 	.item
+// 		width: 50%
+// 		padding: 0px 5px
+// 		margin-bottom: 10px
+// 	.brand-item
+// 		+flexbox
+// 		align-items: center
+// 		align-content: center
+// 		justify-content: center
+// 		background: $white
+// 		+bor-rad(5px)
+// 		overflow: hidden
+// 		box-shadow: 0px 5px 10px color-rgba($black,0.05)
+// 		height: 100px
+// 		img
+// 			max-width: 70%
+// 			max-height: 70%
+.brand-page
+	.brand-wrap
+		padding: 30px 0
+		.brand-list
+			white-space: nowrap
+			overflow: auto
+			padding: 0px 10px
+			.item
+				display: inline-block
+				width: 150px
+				+ .item
+					margin-left: 10px
+		.brand-item
+			display: block
+			background: $white
+			overflow: hidden
+			box-shadow: 0px 5px 10px color-rgba($black,0.05)
+			+bor-rad(5px)
+			.img
+			.caption
+				padding: 10px
+				text-align: center
+				.logo
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					width: 50px
+					height: 50px
+					border: 3px solid $white
+					background: $white
+					margin: -30px auto 5px
+					+pos(rel,null)
+					z-index: 1
+					+bor-rad(3px)
+					box-shadow: 0px 3px 10px color-rgba($black,0.1)
+					img
+						max-width: 100%
+						max-height: 100%
+				.name
+					+fs(14rem)
+					font-weight: 500
+					color: $main
+				.des
+					+fs(11rem)
+					line-height: 1.2
+					color: darken($white,40%)

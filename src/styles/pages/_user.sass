@@ -29,6 +29,17 @@
 					span
 						width: calc(100% - 40px)
 						+fs(14rem)
+						.amount
+							display: inline-block
+							vertical-align: middle
+							+fs(10rem)
+							line-height: 1
+							padding: 3px 8px
+							+bor-rad(50px)
+							color: $white
+							background: $orangegradient
+							margin-left: 10px
+							margin-top: -2px
 	.user-title 
 		+fs(14rem)
 		font-weight: 500
@@ -182,3 +193,25 @@
 				margin-bottom: 10px
 			.product-item
 				box-shadow: none
+	.user-notification
+		margin: 10px 0
+		background: $white
+		padding: 10px
+		.notification-list
+			.item
+				border-bottom: 1px dashed darken($white,10%)
+				&:last-child
+					border: none
+			.notification-item
+				padding: 10px 0
+				+flexbox
+				.img
+					width: 100px
+				.caption
+					width: calc(100% - 100px)
+					padding-left: 15px
+					time
+						+fs(11rem)
+						color: darken($white,40%)
+					.name
+						+fs(13rem)
